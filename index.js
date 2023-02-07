@@ -29,6 +29,4 @@ app.get('/banks', (req, res) => {
 
 // set the server to listen to the port
 
-app.listen(port, () => {
-  console.log(`Listening at localhost ${port}`);
-});
+app.listen();
