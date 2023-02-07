@@ -25,10 +25,12 @@ const banks = [
 // get the bank list in json format
 
 app.get('/banks', (req, res) => {
-    req.json(banks);
+    res.json(banks);
 
 });
 
 // set the server to listen to the port
 
-app.listen(port);
+app.listen(port, () => {
+    console.log(`Listening at localhost ${port}`)
+});
