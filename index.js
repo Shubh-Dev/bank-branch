@@ -29,4 +29,4 @@ app.get('/banks', (req, res) => {
 
 // set the server to listen to the port
 
-app.listen();
+app.listen(port);
