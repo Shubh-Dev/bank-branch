@@ -45,13 +45,16 @@ app.post('/banks', (req, res) => {
 
 // search for a bank in the list
 
-app.get('/banks/:id', (req, res) => {
-  const { id } = req.params;
-  banks.forEach((bank) => {
-    if (bank.id === id) {
-      res.json(bank);
+app.get("/banks/:id", (req, res) => {
+  const id  = req.params.id
+
+    for(let bank of banks) {
+      if(bank.id === id) {
+        res.json(bank)
+        console.log(bank)
+        return
+      }
     }
-  });
   res.status(404).send('Bank not found');
 });
 
